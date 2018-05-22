@@ -1,0 +1,33 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container">
+  <div class="row" style="height: 274px;padding-bottom: 0em;">
+      <div class="col-8 name row">
+          <div class="col-7.5">
+              <h1 class="display-3" style="margin-bottom: 0px;">Omkar Terkar</h1>
+          </div>
+          <div class="col-4.5" style="margin: auto auto 17px 10px;">
+                <h2><small>Autodidact<small class="text-muted">(Selflearner)</small></small></h2>
+          </div>
+        </div>   
+        <div class="col-4">
+          <img class="circle img-thumbnail" src="./assets/SKNCOE-Omkarterkar-2017.jpg" style="height: 95%;">
+        </div>
+        </div>
+        <hr style="width: 100%; color: black;height: 1px;background-color: black;margin: 0px">
+        <div class="row" style="margin: auto; width: 90%;padding-bottom: 0.5em;">
+          <div class="col"  *ngFor="let title of arr" >
+            <h3 class="text-muted"  (click)="navigate(title)" [style.background-color]="title.ISSELECT ? '#98d4e4' : 'white'">{{title.TITLE}}</h3>
+          </div>
+          <!-- <div id="ed" class="col">
+            <h3 class="text-muted" (click)="navigate('ed')" routerLink="/Education">Education</h3>
+          </div>
+          <div id="sk" class="col">
+            <h3 class="text-muted" (click)="navigate('sk')" routerLink="/Skills">Skills</h3>
+          </div>
+          <div id="wo" class="col" ><h3 class="text-muted" routerLink="/Work" (click)="navigate('wo')">Work</h3></div>
+        </div> -->
+  </div>
+  <hr style="width: 100%; color: black;height: 1px;background-color: black;">
+  <router-outlet></router-outlet>
+</div>
+
